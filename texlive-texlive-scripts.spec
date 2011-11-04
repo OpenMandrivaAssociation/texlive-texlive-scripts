@@ -5,7 +5,7 @@
 # catalog-license undef
 # catalog-version undef
 Name:		texlive-texlive-scripts
-Version:	20111103
+Version:	20111104
 Release:	1
 Summary:	TeX Live infrastructure programs
 Group:		Publishing
@@ -64,7 +64,6 @@ tlmgr to run but still ours.  Not included in tlcritical.
 %build
 
 %install
-mkdir -p %{buildroot}%{_bindir}
 pushd %{buildroot}%{_bindir}
     ln -sf %{_texmfdir}/scripts/texlive/rungs.tlu rungs
 popd
