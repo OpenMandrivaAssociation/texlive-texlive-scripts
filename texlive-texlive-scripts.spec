@@ -65,6 +65,7 @@ tlmgr to run but still ours.  Not included in tlcritical.
 %build
 
 %install
+mkdir -p %{buildroot}%{_bindir}
 pushd %{buildroot}%{_bindir}
     ln -sf %{_texmfdir}/scripts/texlive/rungs.tlu rungs
 popd
