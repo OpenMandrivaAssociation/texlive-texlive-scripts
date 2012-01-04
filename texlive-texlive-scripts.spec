@@ -62,5 +62,6 @@ mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
 mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
+mkdir -p %{buildroot}%{_tlpkgobjdir}
 cp -fa install-tl %{buildroot}%{_tlpkgdir}
 cp -fpar tlpkg/installer %{buildroot}%{_tlpkgdir}
