@@ -1,11 +1,11 @@
-# revision 25234
+# revision 25722
 # category TLCore
 # catalog-ctan undef
 # catalog-date undef
 # catalog-license undef
 # catalog-version undef
 Name:		texlive-texlive-scripts
-Version:	20120131
+Version:	20120327
 Release:	1
 Summary:	TeX Live infrastructure programs
 Group:		Publishing
@@ -41,9 +41,9 @@ tlmgr to run but still ours.  Not included in tlcritical.
 %{_texmfdir}/scripts/texlive/rungs.tlu
 %{_texmfdir}/scripts/texlive/test-tlpdb.tlu
 %{_texmfdir}/scripts/texlive/texconf.tlu
-%{_datadir}/tlpkg/installer/install-menu-perltk.pl
-%{_datadir}/tlpkg/installer/install-menu-text.pl
-%{_datadir}/tlpkg/installer/install-menu-wizard.pl
+%{_tlpkgdir}/installer/install-menu-perltk.pl
+%{_tlpkgdir}/installer/install-menu-text.pl
+%{_tlpkgdir}/installer/install-menu-wizard.pl
 %doc %{_mandir}/man1/install-tl.1*
 %doc %{_texmfdir}/doc/man/man1/install-tl.man1.pdf
 
@@ -58,10 +58,10 @@ mkdir -p %{buildroot}%{_bindir}
 pushd %{buildroot}%{_bindir}
     ln -sf %{_texmfdir}/scripts/texlive/rungs.tlu rungs
 popd
+mkdir -p %{buildroot}%{_tlpkgdir}
+cp -fa install-tl %{buildroot}%{_tlpkgdir}
+cp -fpar tlpkg/installer %{buildroot}%{_tlpkgdir}
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
 mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fa install-tl %{buildroot}%{_tlpkgdir}
-cp -fpar tlpkg/installer %{buildroot}%{_tlpkgdir}
