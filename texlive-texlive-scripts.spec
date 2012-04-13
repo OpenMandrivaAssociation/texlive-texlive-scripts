@@ -1,11 +1,11 @@
-# revision 25722
+# revision 25872
 # category TLCore
 # catalog-ctan undef
 # catalog-date undef
 # catalog-license undef
 # catalog-version undef
 Name:		texlive-texlive-scripts
-Version:	20120327
+Version:	20120413
 Release:	1
 Summary:	TeX Live infrastructure programs
 Group:		Publishing
@@ -41,6 +41,7 @@ tlmgr to run but still ours.  Not included in tlcritical.
 %{_texmfdir}/scripts/texlive/rungs.tlu
 %{_texmfdir}/scripts/texlive/test-tlpdb.tlu
 %{_texmfdir}/scripts/texlive/texconf.tlu
+%{_tlpkgdir}/installer/ctan-mirrors.pl
 %{_tlpkgdir}/installer/install-menu-perltk.pl
 %{_tlpkgdir}/installer/install-menu-text.pl
 %{_tlpkgdir}/installer/install-menu-wizard.pl
