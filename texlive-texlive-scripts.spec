@@ -1,11 +1,11 @@
-# revision 28107
+# revision 27312
 # category TLCore
 # catalog-ctan undef
 # catalog-date undef
 # catalog-license undef
 # catalog-version undef
 Name:		texlive-texlive-scripts
-Version:	20121030
+Version:	20120808
 Release:	1
 Summary:	TeX Live infrastructure programs
 Group:		Publishing
@@ -66,3 +66,38 @@ mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
 mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
+
+
+%changelog
+* Wed Aug 08 2012 Paulo Andrade <pcpa@mandriva.com.br> 20120808-1
++ Revision: 812907
+- Update to latest release.
+
+* Mon Jun 11 2012 Paulo Andrade <pcpa@mandriva.com.br> 20120611-1
++ Revision: 805109
+- Update to latest release.
+
+* Sat Apr 14 2012 Paulo Andrade <pcpa@mandriva.com.br> 20120413-1
++ Revision: 790841
+- Update to latest release.
+
+* Tue Mar 27 2012 Paulo Andrade <pcpa@mandriva.com.br> 20120327-1
++ Revision: 787804
+- Update to latest release.
+
+* Tue Jan 31 2012 Paulo Andrade <pcpa@mandriva.com.br> 20120131-1
++ Revision: 770309
+- Update to latest upstream package
+
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20111104-2
++ Revision: 756753
+- Rebuild to reduce used resources
+
+* Sun Nov 06 2011 Paulo Andrade <pcpa@mandriva.com.br> 20111104-1
++ Revision: 722006
+- texlive-texlive-scripts
+- texlive-texlive-scripts
+- texlive-texlive-scripts
+- texlive-texlive-scripts
+- texlive-texlive-scripts
+
