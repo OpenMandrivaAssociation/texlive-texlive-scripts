@@ -1,11 +1,11 @@
-# revision 27312
+# revision 31846
 # category TLCore
 # catalog-ctan undef
 # catalog-date undef
 # catalog-license undef
 # catalog-version undef
 Name:		texlive-texlive-scripts
-Version:	20120808
+Version:	20131009
 Release:	1
 Summary:	TeX Live infrastructure programs
 Group:		Publishing
@@ -20,7 +20,7 @@ Requires(post):	texlive-kpathsea
 Provides:	texlive-texlive-scripts.bin = %{EVRD}
 
 %description
-Includes install-tl, tl-portable, rungs, etc., not needed for
+Includes install-tl, tl-portable, rungs, etc.; not needed for
 tlmgr to run but still ours.  Not included in tlcritical.
 
 %post
@@ -35,18 +35,19 @@ tlmgr to run but still ours.  Not included in tlcritical.
 %files
 %{_bindir}/rungs
 %{_tlpkgdir}/install-tl
-%{_texmfdir}/scripts/texlive/lua/texlive/getopt.tlu
-%{_texmfdir}/scripts/texlive/lua/texlive/tlpdb.tlu
-%{_texmfdir}/scripts/texlive/lua/texlive/utils.tlu
-%{_texmfdir}/scripts/texlive/rungs.tlu
-%{_texmfdir}/scripts/texlive/test-tlpdb.tlu
-%{_texmfdir}/scripts/texlive/texconf.tlu
+%{_texmfdistdir}/scripts/texlive/lua/texlive/getopt.tlu
+%{_texmfdistdir}/scripts/texlive/lua/texlive/tlpdb.tlu
+%{_texmfdistdir}/scripts/texlive/lua/texlive/utils.tlu
+%{_texmfdistdir}/scripts/texlive/rungs.tlu
+%{_texmfdistdir}/scripts/texlive/test-tlpdb.tlu
+%{_texmfdistdir}/scripts/texlive/texconf.tlu
 %{_tlpkgdir}/installer/ctan-mirrors.pl
 %{_tlpkgdir}/installer/install-menu-perltk.pl
 %{_tlpkgdir}/installer/install-menu-text.pl
 %{_tlpkgdir}/installer/install-menu-wizard.pl
+%{_tlpkgdir}/installer/texlive.png
 %doc %{_mandir}/man1/install-tl.1*
-%doc %{_texmfdir}/doc/man/man1/install-tl.man1.pdf
+%doc %{_texmfdistdir}/doc/man/man1/install-tl.man1.pdf
 
 #-----------------------------------------------------------------------
 %prep
@@ -63,41 +64,6 @@ mkdir -p %{buildroot}%{_tlpkgdir}
 cp -fa install-tl %{buildroot}%{_tlpkgdir}
 cp -fpar tlpkg/installer %{buildroot}%{_tlpkgdir}
 mkdir -p %{buildroot}%{_datadir}
-cp -fpar texmf %{buildroot}%{_datadir}
+cp -fpar texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
-mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
-
-
-%changelog
-* Wed Aug 08 2012 Paulo Andrade <pcpa@mandriva.com.br> 20120808-1
-+ Revision: 812907
-- Update to latest release.
-
-* Mon Jun 11 2012 Paulo Andrade <pcpa@mandriva.com.br> 20120611-1
-+ Revision: 805109
-- Update to latest release.
-
-* Sat Apr 14 2012 Paulo Andrade <pcpa@mandriva.com.br> 20120413-1
-+ Revision: 790841
-- Update to latest release.
-
-* Tue Mar 27 2012 Paulo Andrade <pcpa@mandriva.com.br> 20120327-1
-+ Revision: 787804
-- Update to latest release.
-
-* Tue Jan 31 2012 Paulo Andrade <pcpa@mandriva.com.br> 20120131-1
-+ Revision: 770309
-- Update to latest upstream package
-
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20111104-2
-+ Revision: 756753
-- Rebuild to reduce used resources
-
-* Sun Nov 06 2011 Paulo Andrade <pcpa@mandriva.com.br> 20111104-1
-+ Revision: 722006
-- texlive-texlive-scripts
-- texlive-texlive-scripts
-- texlive-texlive-scripts
-- texlive-texlive-scripts
-- texlive-texlive-scripts
-
+mv %{buildroot}%{_texmfdistdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
