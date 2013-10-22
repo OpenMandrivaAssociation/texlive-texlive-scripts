@@ -1,11 +1,11 @@
-# revision 31846
+# revision 31953
 # category TLCore
 # catalog-ctan undef
 # catalog-date undef
 # catalog-license undef
 # catalog-version undef
 Name:		texlive-texlive-scripts
-Version:	20131009
+Version:	20131022
 Release:	1
 Summary:	TeX Live infrastructure programs
 Group:		Publishing
@@ -58,7 +58,7 @@ tlmgr to run but still ours.  Not included in tlcritical.
 %install
 mkdir -p %{buildroot}%{_bindir}
 pushd %{buildroot}%{_bindir}
-    ln -sf %{_texmfdir}/scripts/texlive/rungs.tlu rungs
+    ln -sf %{_texmfdistdir}/scripts/texlive/rungs.tlu rungs
 popd
 mkdir -p %{buildroot}%{_tlpkgdir}
 cp -fa install-tl %{buildroot}%{_tlpkgdir}
