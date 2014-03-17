@@ -1,11 +1,11 @@
-# revision 32922
+# revision 33130
 # category TLCore
 # catalog-ctan undef
 # catalog-date undef
 # catalog-license undef
 # catalog-version undef
 Name:		texlive-texlive-scripts
-Version:	20140214
+Version:	20140317
 Release:	1
 Summary:	TeX Live infrastructure programs
 Group:		Publishing
