@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-texlive-scripts
 Version:	20140317
-Release:	1
+Release:	2
 Summary:	TeX Live infrastructure programs
 Group:		Publishing
 URL:		http://tug.org/texlive
