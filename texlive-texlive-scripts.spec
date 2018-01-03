@@ -1,9 +1,3 @@
-# revision 34093
-# category TLCore
-# catalog-ctan undef
-# catalog-date undef
-# catalog-license undef
-# catalog-version undef
 Name:		texlive-texlive-scripts
 Version:	20171225
 Release:	1
@@ -35,17 +29,10 @@ tlmgr to run but still ours.  Not included in tlcritical.
 %files
 %{_bindir}/rungs
 %{_tlpkgdir}/install-tl
-%{_texmfdistdir}/scripts/texlive/lua/texlive/getopt.tlu
-%{_texmfdistdir}/scripts/texlive/lua/texlive/tlpdb.tlu
-%{_texmfdistdir}/scripts/texlive/lua/texlive/utils.tlu
-%{_texmfdistdir}/scripts/texlive/rungs.tlu
-%{_texmfdistdir}/scripts/texlive/test-tlpdb.tlu
-%{_texmfdistdir}/scripts/texlive/texconf.tlu
-%{_tlpkgdir}/installer/ctan-mirrors.pl
-%{_tlpkgdir}/installer/install-menu-perltk.pl
-%{_tlpkgdir}/installer/install-menu-text.pl
-%{_tlpkgdir}/installer/install-menu-wizard.pl
-%{_tlpkgdir}/installer/texlive.png
+%{_texmfdistdir}/scripts/texlive/lua/texlive/*.tlu
+%{_texmfdistdir}/scripts/texlive/*.tlu
+%{_tlpkgdir}/installer/*.pl
+%{_tlpkgdir}/installer/*.png
 %doc %{_mandir}/man1/install-tl.1*
 %doc %{_texmfdistdir}/doc/man/man1/install-tl.man1.pdf
 
