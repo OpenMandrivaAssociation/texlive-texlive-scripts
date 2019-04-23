@@ -1,6 +1,6 @@
 Name:		texlive-texlive-scripts
-Version:	20180806
-Release:	2
+Version:	20190227
+Release:	1
 Summary:	TeX Live infrastructure programs
 Group:		Publishing
 URL:		http://tug.org/texlive
