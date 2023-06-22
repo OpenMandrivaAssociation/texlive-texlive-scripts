@@ -1,5 +1,5 @@
 Name:		texlive-texlive-scripts
-Version:	67321
+Version:	67422
 Release:	1
 Summary:	TeX Live infrastructure programs
 Group:		Publishing
