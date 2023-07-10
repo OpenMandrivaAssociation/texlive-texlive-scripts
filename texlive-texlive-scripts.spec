@@ -1,6 +1,6 @@
 Name:		texlive-texlive-scripts
 Version:	67587
-Release:	2
+Release:	3
 Summary:	TeX Live infrastructure programs
 Group:		Publishing
 URL:		http://tug.org/texlive
@@ -28,6 +28,10 @@ fi
 #-----------------------------------------------------------------------
 %files
 %{_bindir}/rungs
+%{_bindir}/fmtutil
+%{_bindir}/fmtutil-sys
+%{_bindir}/updmap
+%{_bindir}/updmap-sys
 %{_tlpkgdir}/install-tl
 %{_tlpkgdir}/installer
 %{_texmfdistdir}/dvips/tetex
@@ -56,3 +60,10 @@ mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
 mv %{buildroot}%{_texmfdistdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
+
+# This used to be in texlive-tetex along with the corresponding symlinks.
+# Let's add the symlinks so stuff made for tetex can still find it all...
+ln -s %{_texmfdistdir}/scripts/texlive/fmtutil.pl %{buildroot}%{_bindir}/fmtutil
+ln -s %{_texmfdistdir}/scripts/texlive/fmtutil-sys.sh %{buildroot}%{_bindir}/fmtutil-sys
+ln -s %{_texmfdistdir}/scripts/texlive/updmap.pl %{buildroot}%{_bindir}/updmap
+ln -s %{_texmfdistdir}/scripts/texlive/updmap-sys.sh %{buildroot}%{_bindir}/updmap-sys
