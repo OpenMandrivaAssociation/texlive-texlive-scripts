@@ -15,6 +15,8 @@ BuildArch:	noarch
 BuildSystem:	texlive
 Requires:	texlive(texlive-scripts.bin)
 Requires:	texlive-tlpkg
+Requires:	texlive(gsftopk)
+Requires:	texlive(mfware)
 Provides:	texlive(%{tl_name}) = %{version}
 Provides:	texlive(%{tl_name}.bin) = %{version}
 Provides:	texlive-%{tl_name}.bin = %{EVRD}
