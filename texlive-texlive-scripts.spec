@@ -25,3 +25,10 @@ Provides:	texlive-%{tl_name}.bin = %{EVRD}
 Includes install-tl, tl-portable, rungs, etc.; not needed for tlmgr to
 run but still ours. Not included in tlcritical.
 
+
+%install -a
+mkdir -p %{buildroot}%{_texmf_updmap_d}
+cat > %{buildroot}%{_texmf_updmap_d}/%{tl_name} <<'TL_DROPIN_EOF'
+# from texlive-scripts:
+Map mathpple.map
+TL_DROPIN_EOF
